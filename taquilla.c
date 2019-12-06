@@ -7,6 +7,8 @@
 /***************** SISTEMAS OPERATIVOS **********************/
 /*****************************************************************/
 
+//modificar
+
 #include <linux/taquilla.h>
 #include <linux/sched.h>
 #include <linux/kernel.h>
