@@ -4,7 +4,7 @@
  *  Marcos Cordeiro
  */
 /*****************************************************************/
-/***************** SISTEMAS OPERATIVOS 2019 **********************/
+/***************** SO 2019 **********************/
 /*****************************************************************/
 #include <stdlib.h>
 #include <stdio.h>
@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
 		int procesos[4] = {4, 4, 4, 4};
 		printf(" PRUEBA 1\n Inicialmente con el sistema vacio\n Añadimos 4 procesos de PAGO\n");
 		sleep(3);
-		pruebaanadirOnetoOne(procesos, 4, 2);
+		pruebaanadirOnetoOne(procesos, 3, 2);
 		break;
 	}
 
@@ -166,7 +166,7 @@ int pruebaanadirOnetoOne(int position[], int NumP, int Nsleep)
 		}
 	}
 
-	/*PID = fork();
+	PID = fork();
 
 	switch (PID)
 	{
@@ -183,7 +183,7 @@ int pruebaanadirOnetoOne(int position[], int NumP, int Nsleep)
 	}
 	while ((PID = wait(NULL)) > 0)
 	{
-	}*/
+	}
 
 	return 0;
 }
