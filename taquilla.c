@@ -119,6 +119,7 @@ void anadir_proceso(struct task_struct *pcb){
   else if(strcmp(pcb->comm,"pago")==0){
     pcb->prioridad = 4;
   }
+  
   else if(strcmp(pcb->comm,"reserva")==0){
     pcb->prioridad = 3;
   }
