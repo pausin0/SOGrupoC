@@ -114,7 +114,7 @@ int main(int argc, char *argv[])
 	{
 		int procesos[4] = {1, 1, 1, 5};
 		printf(" PRUEBA 10\n Inicialmente con el sistema vacio \n Añadimos 3 de CONSULTAS y 1 de ADMINISTRACION\n");
-		sleep(5);
+		sleep(2);
 		pruebaanadirOnetoOne(procesos, 3, 2);
 		break;
 	}
@@ -123,7 +123,7 @@ int main(int argc, char *argv[])
 	{
 		int procesos[3] = {5, 4, 3};
 		printf(" PRUEBA 11\n Inicialmente con el sistema vacio \n Añadimos 3 procesos: ADMINISTRACION, PAGOS, ANULACIONES\n");
-		sleep(5);
+		sleep(2);
 		pruebaanadirOnetoOne(procesos, 2, 4);
 		break;
 	}
@@ -131,7 +131,7 @@ int main(int argc, char *argv[])
 	{
 		int position[1] = {0};
 		printf(" PRUEBA 12\n Inicialmente con el sistema vacio \n Añadimos un proceso que dure mas de 10 segundos\n");
-		sleep(5);
+		sleep(2);
 		pruebaanadirOnetoOne(position, 0, 0);
 		break;
 	}
