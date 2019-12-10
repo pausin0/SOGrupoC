@@ -4,10 +4,8 @@
  *  Marcos Cordeiro
  */
 /*****************************************************************/
-/***************** SISTEMAS OPERATIVOS **********************/
+/***************** SO 2019 **********************/
 /*****************************************************************/
-
-//modificar
 
 #include <linux/taquilla.h>
 #include <linux/sched.h>
@@ -49,7 +47,7 @@ int contar_procesos(){
     if(pcb->prioridad>0){
       contador++;
     }
-  }//fin del foreachprocess
+  }
 
   printk("Hay %d procesos en el sistema \n",contador-1);
 
@@ -59,7 +57,7 @@ int contar_procesos(){
   else{
     return 1;
   }
-} //fin contar procesos
+} 
 
 /******************************************************************/
 /*funcion que buscara un reemplazo para un proceso que se quiera  */
@@ -88,18 +86,18 @@ int buscar_reemplazo(int prioridad){
 	kill_pid( find_vpid(pcb->pid), SIGKILL, 1);
 	return 0;
       }
-    }//fin foreachprocess
+    }
 
     contador++;
     if(contador==prioridad){
       printk("No hay procesos de menor prioridad,no se puede añadir \n");
       return 1;
-    }//fin del if
+    }
 
-  }//fin del while
+  }
 
   return 0;
-}//fin buscar reemplazo
+}
 
 
 /*****************************************************************/
