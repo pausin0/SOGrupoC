@@ -111,16 +111,16 @@ int buscar_reemplazo(int prioridad){
 void anadir_proceso(struct task_struct *pcb){
 
   if(strcmp(pcb->comm,"administracion")==0){
-    pcb->prioridad = 4;
+    pcb->prioridad = 5;
   }
   else if(strcmp(pcb->comm,"largo")==0){
-    pcb->prioridad = 4;
+    pcb->prioridad = 5;
   }
   else if(strcmp(pcb->comm,"pago")==0){
-    pcb->prioridad = 3;
+    pcb->prioridad = 4;
   }
   else if(strcmp(pcb->comm,"reserva")==0){
-    pcb->prioridad = 2;
+    pcb->prioridad = 3;
   }
   else if(strcmp(pcb->comm,"anulacion")==0){
     pcb->prioridad = 2;
@@ -158,9 +158,13 @@ void anadir_a_cola(struct task_struct *pcb){
   }
 
   switch(pcb->prioridad){
+
+     case 5 : nodo.sched_priority = 90;
+              policy=SCHED_RR;
+	      break;
     
      case 4 : nodo.sched_priority = 85;
-              policy=SCHED_RR;
+              policy=SCHED_FIFO;
 	      break;
   
      case 3 : nodo.sched_priority = 80;
