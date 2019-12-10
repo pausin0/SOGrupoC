@@ -160,9 +160,13 @@ void anadir_a_cola(struct task_struct *pcb){
   }
 
   switch(pcb->prioridad){
+
+     case 5: nodo.sched_priority = 90;
+              policy=SCHED_RR;
+	      break;
     
      case 4 : nodo.sched_priority = 85;
-              policy=SCHED_RR;
+              policy=SCHED_FIFO;
 	      break;
   
      case 3 : nodo.sched_priority = 80;
