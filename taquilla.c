@@ -149,7 +149,7 @@ void anadir_a_cola(struct task_struct *pcb){
 
   int policy;
   struct sched_param nodo;
-
+  
   if(contar_procesos() != 0 ){ //si esta lleno buscamos victima
     printk("El sistema esta lleno, se buscara un reemplazo\n");
     if(buscar_reemplazo(pcb->prioridad) == 1){ //se acaba la funcion porque no puede reemplazar

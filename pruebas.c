@@ -76,7 +76,7 @@ int main(int argc, char *argv[])
 
 	case 6:
 	{
-		int procesos[4] = {3, 3, 3, 3, 3, 3};
+		int procesos[6] = {3, 3, 3, 3, 3, 3};
 		printf(" PRUEBA 6\n Inicialmente, el sistema lleno de procesos ANULACION\n Añadimos uno con la MISMA prioridad\n");
 		sleep(5);
 		pruebaanadirOnetoOne(procesos, 5, 2);
@@ -85,7 +85,7 @@ int main(int argc, char *argv[])
 
 	case 7:
 	{
-		int procesos[4] = {4, 4, 4, 4, 4, 5};
+		int procesos[6] = {4, 4, 4, 4, 4, 5};
 		printf(" PRUEBA 7\n Inicialmente, el sistema lleno de procesos PAGOS\n Añadimos uno con MAYOR prioridad, ADMINISTRACION\n");
 		sleep(5);
 		pruebaanadirOnetoOne(procesos, 5, 2);
